@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductListComponent } from '../products/product-list.component';
 import { ProductDetailGuard } from '../products/product-detail.guard';
+import { ProductDetailComponent } from '../products/product-detail.component';
 
 @NgModule({
   declarations: [],
@@ -13,7 +14,7 @@ import { ProductDetailGuard } from '../products/product-detail.guard';
       { 
         path: 'products/:id',
         canActivate: [ProductDetailGuard],
-        component: ProductListComponent
+        component: ProductDetailComponent
       }
     ])
   ],
